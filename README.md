@@ -7,7 +7,7 @@ This repository features EDA on the [House Prices Advanced Regression Techniques
 # Sale Price Distribution
 The IQR for home sales falls between $130,000 and $214,000 with a mean of $180,000. There are 61 outliers above the IQR, with a max of $755,000. A historgram displays this long and heavy right tailed distribution with a skewness of 1.88. The distribution also features a high peak, with a kurtosis of 6.53.
 
-# Missing Data and Autliers
+# Missing Data and Outliers
 16 columns featured more than 30 null values, with four columns featuring more than 1,000. Most of these columns have null values because a given house does not have that feature. IE 94% of houses in Ames, Iowa probably do not abut an alley. I could look at the distribution of values of these columns to see if replacing null values with zeros or "false" would make sense.
 
 17 columns featured more than 30 outliers, with five columns featuring more than 100. Three of those five columns have a lot of outliers because the IQR is zero, indicating most houses again do not have that feature. The overall conditin column seems intuitively related to price, so I would investigate outliers more when building a model. MSSubClass seems like it should be an object data type with numeric codes representing the dwelling type.
