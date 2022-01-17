@@ -1,11 +1,11 @@
 
 [Open My Notebook - Linear Regression Models](https://colab.research.google.com/drive/119duCEpMRs5B7-0ZYuYheBPMiyqUhrI_?usp=sharing)
 
-# Housing-EDA
+# Housing-EDA and Model Development
 EDA on Housing Data for Ames, Iowa
 
 # Overview
-This repository features EDA on the [House Prices Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview) kaggle data set, which features data related to home sales in Ames, Iowa. The goal of this EDA is to understand potential predictors of house values.
+This repository features EDA and prediction on the [House Prices Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview) kaggle data set, which features data related to home sales in Ames, Iowa. The goal of this EDA and model development is to understand and predict house values.
 
 # Sale Price Distribution
 The IQR for home sales falls between $130,000 and $214,000 with a mean of $180,000. There are 61 outliers above the IQR, with a max of $755,000. A historgram displays this long and heavy right tailed distribution with a skewness of 1.88. The distribution also features a high peak, with a kurtosis of 6.53.
