@@ -23,9 +23,6 @@ Categorical variables such as kitchen quality and exterior condition were examin
 
 A feature counting the total number of full and half baths was also added. Further, a feature counting total livable square feet was added.
 
-# Min-max and Standard Scaling
-I drop the ID column to prepare my training data as it is just an index column. Categorical columns are replaced with dummy variables/columns prior to scaling.
-
 # Model Development
 Overall, 6 fold cross validation was implemented to evaluate linear, ridge, and lasso regression models. Each model produced an RMSLE within .004 of one another, and the Lasso regression model performed the best on the Kaggle test set. Both lasso and ridge regression performed better than the base linear regression model, indicating overfitting may have been reduced. Robost scaling was also used for each model to limit sensitivity to outliers.
 
