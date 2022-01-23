@@ -1,5 +1,5 @@
 
-[Open My Notebook - Linear Regression Models](https://colab.research.google.com/drive/119duCEpMRs5B7-0ZYuYheBPMiyqUhrI_?usp=sharing)
+[Open My Notebook - Linear Regression Models](https://colab.research.google.com/drive/1ztBEbLpyelwc1jqE4kADUz1vnltZPTF6?usp=sharing)
 
 # Housing-EDA and Model Development
 EDA on Housing Data for Ames, Iowa
