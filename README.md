@@ -23,6 +23,9 @@ Categorical variables such as kitchen quality and exterior condition were examin
 
 A feature counting the total number of full and half baths was also added. Further, a feature counting total livable square feet was added.
 
+# Data Formatting
+In a second round of formatting, categorical variables displaying order were manually and numerically ranked. Remaining categorical features were transformed into dummy variables, and numeric features were standardized.
+
 # Model Development
 Overall, 6 fold cross validation was implemented to evaluate linear, ridge, and lasso regression models. Each model produced an RMSLE within .004 of one another, and the Lasso regression model performed the best on the Kaggle test set. Both lasso and ridge regression performed better than the base linear regression model, indicating overfitting may have been reduced. Robost scaling was also used for each model to limit sensitivity to outliers.
 
@@ -30,3 +33,9 @@ Overall, 6 fold cross validation was implemented to evaluate linear, ridge, and 
 Features that seemed intuitively related to sale price, such as pool quality, overall quality, overall condition, and garage car spaces each had relatively large coefficients in my linear model. Street had the largest coefficient in my linear model. Given nearly all houses had "paved" street access, this variable should be dropped for future models as the related value is more reflective of an intercept for my model. 
 
 Residual plots (predicted less actual sale prices) of my linear and lasso regression models did not reveal any clear shape or trend. This indicates there is a fair amount of equality of variance between features, adhering to basic linear regression assumptions. Sale price was log 10 transformed. A histogram of residuals did reflect a high peak, just as the distribution of sale price variable did. 
+
+# Model Tuning
+The ridge model was tuned to an alpha of 10, implying model performance could be improved by shrinking predictor coeficients/applying significant regularization. This should reduce overfitting. Similarly, the elastic net alpha was tuned to .001, where a value of zero would be equivalent to performing ridge regresstion. But, the lasso model was tuned to an alpha of .0001, indicating not much regularization is needed. So, we can conclude there are many variables present that add a small amount of predictive power to our model. IE our model performs better by including these variables with low coefficients (via ridge with a high alpha) over removing them completely (via lasso with a high alpha).
+
+# Model Performance
+The tuned ridge model got the highest kaggle test score of .13307. This model featured an R-Square of .951 on training data, explaining just over 95% of the variance in sale price. Differences between model resutls were minimal.
